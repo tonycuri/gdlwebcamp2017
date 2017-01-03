@@ -146,6 +146,14 @@ h3{
     background: #fff;
     color:#fe4918;    
 }
+.button.transparente{
+    background: transparent;
+    border:2px solid #FFFFFF;
+}
+.button.transparente:hover{
+    border:2px solid #fe4918;
+    color:#fe4918;
+}
 ul{
     list-style: none;
     margin: 0;
@@ -633,9 +641,88 @@ footer.info-testimonial cite span{
     display:block;
     text-transform: none;
     margin-top: 5px;
-
+}
+/****Newsletter***/
+.newsletter{
+    position:relative;
+    height: auto;
+}
+.newsletter:before{
+    background-image: url(../img/bg-newsletter.jpg);
+    content:'';
+}
+.newsletter .contenido{
+    padding: 10px 0;
+    color:#FFF;
+    text-align: center; 
+    position:relative;
+}
+.newsletter .contenido p{
+    font-size: 1.2em;
+    text-transform: lowercase;
+}
+.newsletter .contenido h3{
+    color:#FFF;
+    text-transform: uppercase;
+    font-size: 7vw;
+    font-family: 'PT Sans', sans-serif;
+}
+/****Cuenta Regresiva***/
+.cuenta-regresiva ul li{
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.6rem;
+    text-align: center;
+}
+@media only screen and (min-width: 768px){
+    .cuenta-regresiva ul li{
+        width: 25%;
+        float:left;
+    }
 }
 
+/***FOOTER***/
+footer{
+    background: #353535;
+    padding-top:40px;
+    margin-top: 20px;
+}
+footer .contenedor >div{
+    color:#fff;
+    padding: 0 20px;
+    font-size: 12px;
+}
+
+@media only screen and (min-width: 768px){
+    footer .contenedor>div{
+        width: 33.3%;
+        float:left;
+    }
+}
+
+footer h3{
+    color:#FFF;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 20px;
+}
+footer h3 span{
+    color:#fe4918;
+}
+
+footer .ultimos-tweets li{
+    margin-bottom: 10px;
+}
+footer nav.redes-sociales{
+    text-align: left;
+}
+p.copyright{
+    background: #2e2e2e;
+    color:#FFF;
+    padding: 15px 0;
+    margin: 20px 0;
+    text-align: center;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
