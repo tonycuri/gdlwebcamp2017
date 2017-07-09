@@ -144,7 +144,7 @@ h3{
 .button.hollow,
 .button.hollow:hover{
     background: #fff;
-    color:#fe4918;    
+    color:#fe4918;
 }
 .button.transparente{
     background: transparent;
@@ -180,7 +180,7 @@ ul{
     .contenedor{
         width: 90%;
         max-width: 1100px;
-    }   
+    }
 }
 
 .seccion{
@@ -190,6 +190,45 @@ ul{
     font-size: 1.2em;
     text-align: center;
 }
+/*Lettering*/
+h1.nombre-sitio span{
+    position: relative;
+    text-shadow: 0 0 30px black;
+}
+@media only screen and (min-width:992px){
+    .char1{
+        top:20px; right: 20px;
+    }
+    .char2{
+        top:0px; left:-20px;
+    }
+    .char3{
+        top:10px; right: 20px;
+    }
+    .char4{
+        top:5px; right: 10px;
+    }
+    .char5{
+        top: 15px; right: 10px;
+    }
+    .char6{
+        top: 5px; right: 10px;
+    }
+    .char7{
+        top: 20px; left: -10px;
+    }
+    .char8{
+        top:0; left: 10px;
+    }
+    .char9{
+        top:10px; right: -20px;
+    }
+    .char10{
+        top: 30px; right: -15px;
+    }
+}
+
+
 /**Header**/
 .hero{
     background-image: url(../img/encabezado.jpg);
@@ -224,7 +263,7 @@ nav.redes-sociales a:last-child{
 @media only screen and (min-width: 768px){
     .informacion-evento{
        width: 70%;
-       margin: 0 auto; 
+       margin: 0 auto;
        margin-top: 50px;
     }
 }
@@ -240,7 +279,7 @@ nav.redes-sociales a:last-child{
     margin-right: 10px;
 }
 p.ciudad{
-    display:block;    
+    display:block;
     text-align: center;
 }
 @media only screen and (min-width: 768px){
@@ -256,7 +295,7 @@ p.ciudad{
         font-size: 2.4rem;
         margin-right: 10px;
 }
-    
+
 }
 p.slogan{
     text-transform: none !important;
@@ -283,9 +322,16 @@ h1.nombre-sitio{
     background-color: #353535;
     padding: 20px 0;
 }
+.fixed{
+    position:fixed;
+    width: 100%;
+    top:0;
+    left: 0;
+    z-index:2;
+}
 .logo{
     width: 80%;
-     float:left;
+    float:left;
 }
 .logo img{
     max-width: 100%;
@@ -299,6 +345,8 @@ h1.nombre-sitio{
 /*Navegacion principal*/
 nav.navegacion-principal{
     display:none;
+    width: 100%;
+    margin-top: 10px;
 }
 
 nav.navegacion-principal a{
@@ -307,11 +355,12 @@ nav.navegacion-principal a{
     font-size: 1.3em;
     text-transform: uppercase;
     text-decoration: none;
-    transition:all .3s ease;
+    transition:all .6s ease;
     width: 100%;
     display:block;
     text-align: center;
     margin-bottom: 20px;
+    clear:both;
 }
 nav.navegacion-principal a:hover{
     background: #fe4918;
@@ -370,7 +419,7 @@ section.programa{
 }
 .contenedor-video{
     max-width: 100%;
-    overflow-x:hidden; 
+    overflow-x:hidden;
 }
 .contenido-programa{
     position:absolute;
@@ -396,8 +445,6 @@ section.programa{
 }
 nav.menu-programa{
     width: 100%;
-    border-bottom:1px solid #fe4918;
-    padding-bottom: 10px;
 }
 @media only screen and (min-width:768px){
     nav.menu-programa{
@@ -412,6 +459,23 @@ nav.menu-programa a{
     font-family: 'Oswald',sans-serif;
     margin-bottom: 10px;
     font-size: 1.2em;
+    position:relative;
+    border-bottom:1px solid #fe4918;
+}
+nav.menu-programa a.activo::after{
+  position:absolute;
+  content: '';
+  left:0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  height: 20px;
+  width: 30px;
+  background-image:url(../img/talleres-flecha.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  bottom:-20px;
+  padding-bottom: 10px;
 }
 @media only screen and (min-width:768px){
     nav.menu-programa a{
@@ -424,7 +488,9 @@ nav.menu-programa a i,
     font-size: 1.5em;
     margin-right: 10px;
 }
-
+div.ocultar{
+  display: none;
+}
 /******detalle evento*****/
 .detalle-evento{
     margin-top: 20px;
@@ -668,7 +734,7 @@ footer.info-testimonial cite span{
 .newsletter .contenido{
     padding: 10px 0;
     color:#FFF;
-    text-align: center; 
+    text-align: center;
     position:relative;
 }
 .newsletter .contenido p{
@@ -739,6 +805,14 @@ p.copyright{
 }
 
 /****================================= INTERNAS ==================*/
+/*CONFERENCIA*/
+body.conferencia .navegacion-principal .activo{
+    border-bottom: 2px solid #fe4918;
+}
+div.galeria a{
+    display: inline-block;
+    margin-bottom: 5px;
+}
 /****REGISTRO******/
 form.registro h3{
     text-align: center;
@@ -784,7 +858,7 @@ div.paquetes .tabla-precio input{
     width: 100px;
     margin: 10px auto 0 auto;
     display:block;
-} 
+}
 
 .contenido-dia{
     padding: 20px;

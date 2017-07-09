@@ -1,7 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="es">
 	<head>
-		<link rel="stylesheet" href="">
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<title></title>
@@ -53,7 +52,7 @@
 					<span></span>
 				</div>
 				<nav class="navegacion-principal clearfix">
-					<a href="#">Conferencia</a>
+					<a href="conferencia.html">Conferencia</a>
 					<a href="#">Calendario</a>
 					<a href="#">Invitados</a>
 					<a href="registro.html">Reservaciones</a>
@@ -93,6 +92,36 @@
 								<p><i class="fa fa-clock-o" aria-hidden="true"></i>13:00 hrs</p>
 								<p><i class="fa fa-calendar" aria-hidden="true"></i>10 de Dic</p>
 								<p><i class="fa fa-user" aria-hidden="true"></i>Tony Curi Caballero</p>
+							</div>
+							<a href="#" class="button float-right">Ver todos</a>
+						</div><!--talleres-->
+						<div id="conferencias" class="info-curso ocultar clearfix">
+							<div class="detalle-evento">
+								<h3>Como ser Freelancer</h3>
+								<p><i class="fa fa-clock-o" aria-hidden="true"></i>10:00 hrs</p>
+								<p><i class="fa fa-calendar" aria-hidden="true"></i>10 de Dic</p>
+								<p><i class="fa fa-user" aria-hidden="true"></i>Gregorio Sanchez</p>
+							</div>
+							<div class="detalle-evento">
+								<h3>Tecnologías del futuro</h3>
+								<p><i class="fa fa-clock-o" aria-hidden="true"></i>13:00 hrs</p>
+								<p><i class="fa fa-calendar" aria-hidden="true"></i>10 de Dic</p>
+								<p><i class="fa fa-user" aria-hidden="true"></i>Susan Sanchéz</p>
+							</div>
+							<a href="#" class="button float-right">Ver todos</a>
+						</div><!--talleres-->
+						<div id="seminarios" class="info-curso ocultar clearfix">
+							<div class="detalle-evento">
+								<h3>Diseño UI/UX para móviles</h3>
+								<p><i class="fa fa-clock-o" aria-hidden="true"></i>16:00 hrs</p>
+								<p><i class="fa fa-calendar" aria-hidden="true"></i>10 de Dic</p>
+								<p><i class="fa fa-user" aria-hidden="true"></i>Harold García</p>
+							</div>
+							<div class="detalle-evento">
+								<h3>Aprende a programar en una mañana</h3>
+								<p><i class="fa fa-clock-o" aria-hidden="true"></i>13:00 hrs</p>
+								<p><i class="fa fa-calendar" aria-hidden="true"></i>11 de Dic</p>
+								<p><i class="fa fa-user" aria-hidden="true"></i>Susana Rivero</p>
 							</div>
 							<a href="#" class="button float-right">Ver todos</a>
 						</div><!--talleres-->
@@ -144,10 +173,10 @@
 		<div class="contador parallax">
 			<div class="contenedor">
 				<ul class="resumen-evento clearfix">
-					<li><p class="numero">6</p>Invitados</li>
-					<li><p class="numero">15</p>Talleres</li>
-					<li><p class="numero">3</p>Días</li>
-					<li><p class="numero">9</p>Conferencias</li>
+					<li><p class="numero"></p>Invitados</li>
+					<li><p class="numero"></p>Talleres</li>
+					<li><p class="numero"></p>Días</li>
+					<li><p class="numero"></p>Conferencias</li>
 				</ul>
 			</div>
 		</div><!--parallax-->
@@ -238,10 +267,10 @@
 			<h2>Faltan</h2>
 			<div class="cuenta-regresiva contenedor">
 				<ul class="clearfix">
-					<li><p class="numero">80</p>días</li>
-					<li><p class="numero">15</p>horas</li>
-					<li><p class="numero">5</p>minutos</li>
-					<li><p class="numero">30</p>segundos</li>
+					<li><p id="dias" class="numero"></p>días</li>
+					<li><p id="horas" class="numero"></p>horas</li>
+					<li><p id="minutos" class="numero"></p>minutos</li>
+					<li><p id="segundos" class="numero"></p>segundos</li>
 				</ul>
 			</div>
 		</section>
@@ -277,6 +306,9 @@
 		<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
 		<script src="js/plugins.js"></script>
+		<script src="js/jquery.animateNumber.min.js"></script>
+		<script src="js/jquery.countdown.min.js"></script>
+		<script src="js/jquery.lettering.js"></script>
 		<script src="js/main.js"></script>
 
 		 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASwUlsvCAZAUV5pfG8c0xcb31M5ANweMA&callback=initMap"
@@ -295,4 +327,4 @@
 	</body>
 </html>
 
-https://mega.nz/#F!pzpgxL7I!iwvJfPBjdk5bkqPQ93NhVQ
+

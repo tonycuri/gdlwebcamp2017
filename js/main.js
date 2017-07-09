@@ -1,4 +1,4 @@
-var api =  'AIzaSyASwUlsvCAZAUV5pfG8c0xcb31M5ANweMA'; 
+var api =  'AIzaSyASwUlsvCAZAUV5pfG8c0xcb31M5ANweMA';
 
 function initMap() {
 	var latLng = {
@@ -34,14 +34,14 @@ function initMap() {
 
 (function(){
 	"use strict";
-	
+
 	document.addEventListener('DOMContentLoaded',function(){
-		
+
 		//campos datos usuarios
 		var nombre = document.getElementById('nombre');
 		var apellido = document.getElementById('apellido');
 		var email = document.getElementById('email');
-		
+
 		var regalo = document.getElementById('regalo');
 
 		// Campos Pases
@@ -59,7 +59,10 @@ function initMap() {
 		//Extras
 		var etiquetas = document.getElementById('etiquetas');
 		var camisas = document.getElementById('camisa_evento');
+		
+	if(document.getElementById('calcular')){
 
+	
 		calcular.addEventListener('click', calcularMontos);
 
 		pase_dia.addEventListener('blur', mostrarDias);
@@ -107,7 +110,7 @@ function initMap() {
 						boletos2Dias = parseInt(pase_dosdias.value, 10) || 0,
 						boletoCompleto = parseInt(pase_completo.value, 10) || 0,
 						cantCamisas = parseInt(camisas.value, 10) || 0,
-						cantEtiquetas = parseInt(etiquetas.value, 10) || 0; 
+						cantEtiquetas = parseInt(etiquetas.value, 10) || 0;
 
 				var totalPagar = (boletosDia * 30) + (boletos2Dias * 45) + (boletoCompleto * 50) + ((cantCamisas * 10) *.93) + (cantEtiquetas * 2);
 
@@ -162,5 +165,63 @@ function initMap() {
 							document.getElementById(diasElegidos[i]).style.display = 'block';
 						}
 			}
+	}	
 	});//DOM CONTENT LOADED
 })();
+
+$(function(){
+	//Letering
+	$('.nombre-sitio').lettering();
+
+	//menu fijo
+	var windowHeight = $(window).height();
+	var barraAltura = $('.barra').innerHeight();
+
+	
+	$(window).scroll(function(){
+		var scroll = $(window).scrollTop();
+		if(scroll > windowHeight){
+			$('.barra').addClass('fixed');
+			$('body').css({'margin-top': barraAltura+'px'});
+		}else{
+			$('.barra').removeClass('fixed');
+			$('body').css({'margin-top':'0px'});
+		}
+		
+	});
+
+	//Menu responsive
+	$('.menu-movil').on('click',function(){
+		$('.navegacion-principal').slideToggle();
+	});
+
+	//programa de conferencias
+	$('.programa-evento .info-curso:first').show();
+	$('.menu-programa a:first').addClass('activo');
+
+	$('.menu-programa a').on('click',function(){
+		$('.menu-programa a').removeClass('activo');
+		$(this).addClass('activo');
+		$('.ocultar').hide();
+
+		var enlace = $(this).attr('href');
+		$(enlace).fadeIn(1000);
+
+		return false;
+	});
+
+	//Animacion de los numeros
+	$('.resumen-evento li:nth-child(1) p').animateNumber({number: 6},1200);
+	$('.resumen-evento li:nth-child(2) p').animateNumber({number: 15},1200);
+	$('.resumen-evento li:nth-child(3) p').animateNumber({number: 3},1500);
+	$('.resumen-evento li:nth-child(4) p').animateNumber({number: 9},1500);
+
+	//Cuenta regresiva utilizamos countdown y ponemos la fecha y hora a la que queremos llegar
+	$('.cuenta-regresiva').countdown('2017/12/25 19:00:00', function(event){
+		$('#dias').html(event.strftime('%D'));
+		$('#horas').html(event.strftime('%H'));
+		$('#minutos').html(event.strftime('%M'));
+		$('#segundos').html(event.strftime('%S'));
+
+	});
+});
